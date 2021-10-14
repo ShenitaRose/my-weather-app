@@ -1,0 +1,110 @@
+body {
+  font-family: "Fredoka One", cursive;
+}
+
+.main-card {
+  margin-top: 60px;
+}
+
+.search-bar {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 60px;
+}
+h2 {
+  font-size: 50px;
+}
+
+.today-card {
+  background-color: #fbf2d5;
+}
+
+.day-overview {
+  background-color: #f5e1da;
+  color: black;
+  margin: 20px;
+  text-align: center;
+  padding: 8px;
+  border-radius: 5px;
+  border: gray;
+}
+
+.button-current {
+  margin: 10px;
+  background: #fbf2d5;
+  color: black;
+  border: #fbf2d5;
+  
+}
+
+
+.button-today {
+  background: #f5e1da;
+  border: #f5e1da;
+  color: black;
+  margin: 10px;
+}
+
+.button-hourly {
+  background: #b6e1e0;
+  border: #b6e1e0;
+  color: black;
+  margin: 10px;
+}
+
+.button-daily {
+  background: #a2a8d3;
+  border: #a2a8d3;
+  color: black;
+  margin: 10px;
+}
+
+.monday-card {
+  background: #f5e1da;
+  margin-bottom: 20%;
+}
+
+.tuesday-card {
+  background: #bcdbdf;
+  margin-bottom: 20%;
+}
+
+.wednesday-card {
+  background: #fbf2d5;
+  margin-bottom: 20%;
+}
+
+.thursday-card {
+  background: #c4c1e0;
+  margin-bottom: 20%;
+}
+
+.friday-card {
+  background: #fed39f;
+  margin-bottom: 20%;
+}
+
+.saturday-card {
+  background: #ebebcd;
+  margin-bottom: 20%;
+}
+
+.sunday-card {
+  background: #d4f0f0;
+  margin-bottom: 20%;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #b6e1e0;
+  color: #fff;
+  margin-top: 20px;
+  border-radius: 5px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
