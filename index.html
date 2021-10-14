@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f5f91c1704.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>Weather</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card main-card">
+        <div class="card-body">
+
+
+         <form id="search-form">
+           <input
+           type="text"
+           placeholder="Search for a city"
+           autocomplete="off"
+           autofocus="on"
+           id="search-text-input"
+           />
+           <input type="submit" value="Search" />
+         </form>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-8">
+                <h1 class="temperature">15°C</h1>
+                <p>
+                  <div class="humidity">Humidity: 81%</div>
+                  <div class="wind-speed">Wind: 18 mph</div>
+                 
+                </p>
+                <h2><strong>London</strong></h2>
+              </div>
+              <div class="col">
+                <div class="card text-center today-card" style="width: 18rem">
+                  <div class="card-body">
+                    <h1 class="card-title">
+                      <i class="fas fa-cloud-sun sun-cloud"></i>
+                    </h1>
+                    <h6 class="card-subtitle mb-2 text-muted time-day">
+                      Mon, Aug 12, 10:00, 2019
+                    </h6>
+                    <p class="card-text">Mostly Sunny</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <button type="button" class="btn btn-primary button-current ">
+                Current Location
+         </button>
+
+          <div class="row justify-content-md-center">
+            <div class="col-md-auto">
+              <button type="button" class="btn btn-primary button-today">
+                Today
+              </button>
+              <button type="button" class="btn btn-primary button-hourly">
+                Hourly
+              </button>
+              <button type="button" class="btn btn-primary button-daily">
+                Daily
+              </button>
+            </div>
+          </div>
+
+          <br />
+
+          <div class="row">
+            <div class="col-sm day-overview">
+              Morning
+              <br />
+              15°
+              <br />
+              <i class="fas fa-cloud-sun sunny-cloud"></i>
+              <br />
+              💧 2%
+            </div>
+            <div class="col-sm day-overview">
+              Afternoon
+              <br />
+              17°
+              <br />
+              <i class="fas fa-cloud-sun sunny-cloud"></i>
+              <br />
+              💧 1%
+            </div>
+            <div class="col-sm day-overview">
+              Evening
+              <br />
+              14°
+              <br />
+              <i class="fas fa-cloud-moon"></i>
+              <br />
+              💧 5%
+            </div>
+
+            <div class="col-sm day-overview">
+              Overnight
+              <br />
+              12°
+              <br />
+              <i class="fas fa-cloud-moon"></i>
+              <br />
+              💧 9%
+            </div>
+          </div>
+
+          <br />
+
+          <div class="row">
+            <div class="col">
+              <div class="card text-center monday-card">
+                <div class="card-body">
+                  <h5 class="card-heading">Monday</h5>
+                  <i class="fas fa-cloud-sun sunny-cloud"></i>
+                  <p class="card-text">
+                    <i class="fas fa-temperature-high"></i>17°
+                    <i class="fas fa-temperature-low"></i>11°
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card text-center tuesday-card">
+                <div class="card-body">
+                  <h5 class="card-heading">Tuesday</h5>
+                  <i class="fas fa-cloud-showers-heavy heavy-rain"></i>
+                  <p class="card-text">
+                    <i class="fas fa-temperature-high"></i>17°
+                    <i class="fas fa-temperature-low"></i>9°
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card text-center wednesday-card">
+                <div class="card-body">
+                  <h5 class="card-heading">Wednesday</h5>
+                  <i class="fas fa-cloud-sun sunny-cloud"></i>
+                  <p class="card-text">
+                    <i class="fas fa-temperature-high"></i>15°
+                    <i class="fas fa-temperature-low"></i>8°
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card text-center thursday-card">
+                <div class="card-body">
+                  <h5 class="card-heading">Thursday</h5>
+                  <i class="fas fa-cloud-showers-heavy heavy-rain"></i>
+                  <p class="card-text">
+                    <i class="fas fa-temperature-high"></i>16°
+                    <i class="fas fa-temperature-low"></i>15°
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card text-center friday-card">
+                <div class="card-body">
+                  <h5 class="card-heading">Friday</h5>
+                  <i class="fas fa-cloud-showers-heavy heavy-rain"></i>
+                  <p class="card-text">
+                    <i class="fas fa-temperature-high"></i>16°
+                    <i class="fas fa-temperature-low"></i>9°
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card text-center saturday-card">
+                <div class="card-body">
+                  <h5 class="card-heading">Saturday</h5>
+                  <i class="fas fa-cloud-showers-heavy heavy-rain"></i>
+                  <p class="card-text">
+                    <i class="fas fa-temperature-high"></i>16°
+                    <i class="fas fa-temperature-low"></i>11°
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card text-center sunday-card">
+                <div class="card-body">
+                  <h5 class="card-heading">Sunday</h5>
+                  <i class="fas fa-cloud-showers-heavy heavy-rain"></i>
+                  <p class="card-text">
+                    <i class="fas fa-temperature-high"></i>15°
+                    <i class="fas fa-temperature-low"></i>11°
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>© 2021 Shenita Rose</p>
+      </footer>
+
+      <br />
+    </div>
+  </body>
+
+  <script src="src/script.js"></script>
+</html>
